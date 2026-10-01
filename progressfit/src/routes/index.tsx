@@ -20,11 +20,11 @@ function App() {
             Running
           </h2>
 
-          <p className="mt-2 text-muted-foreground">
+          <p className="mt-2 color-primary-foreground">
             Track distance, duration and pace.
           </p>
 
-          <button className="mt-4 rounded-lg bg-primary px-4 py-2 font-medium text-primary-foreground">
+          <button className="mt-4 rounded-lg bg-primary hover:bg-primary-hover active:bg-primary-active px-4 py-2 font-medium text-primary-foreground">
             Start Running
           </button>
         </div>
@@ -39,7 +39,7 @@ function App() {
             Track your reps and exercises.
           </p>
 
-          <button className="mt-4 rounded-lg bg-accent px-4 py-2 font-medium text-accent-foreground">
+          <button className="mt-4 rounded-lg bg-accent hover:bg-accent-hover active:bg-accent-active px-4 py-2 font-medium text-accent-foreground">
             Start Workour
           </button>
         </div>

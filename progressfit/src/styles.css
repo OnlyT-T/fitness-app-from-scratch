@@ -20,10 +20,14 @@
 
   /* Running */
   --color-primary: #a3e635;
+  --color-primary-hover: #84cc16;
+  --color-primary-active: #65a30d;
   --color-primary-foreground: #131317;
 
   /* Calisthenics */
   --color-accent: #8b5cf6;
+  --color-accent-hover: #7c3aed;
+  --color-accent-active: #6d28d9;
   --color-accent-foreground: #ffffff;
 }
 
