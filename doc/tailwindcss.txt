@@ -1,0 +1,39 @@
+1. BẢNG THUẬT NGỮ CHUNG
+| Muốn làm        | Tailwind        | CSS tương đương    |
+| -------------   | -------------   | ------------------ |
+| Background      | `bg-blue-500`   | `background-color` |
+| Text color      | `text-white`    | `color`            |
+| Font size       | `text-xl`       | `font-size`        |
+| Bold            | `font-bold`     | `font-weight`      |
+| Padding         | `p-4`           | `padding`          |
+| Margin          | `m-4`           | `margin`           |
+| Margin top      | `mt-4`          | `margin-top`       |
+| Padding X       | `px-4`          | left + right       |
+| Padding Y       | `py-4`          | top + bottom       |
+| Width           | `w-full`        | `width: 100%`      |
+| Height          | `h-screen`      | `height: 100vh`    |
+| Border radius   | `rounded-lg`    | `border-radius`    |
+| Shadow          | `shadow-md`     | `box-shadow`       |
+| Flexbox         | `flex`          | `display: flex`    |
+| Grid            | `grid`          | `display: grid`    |
+
+2. ĐƠN VI ĐO
++) p-1 → 0.25rem → 4px
++) p-2 → 0.5rem  → 8px
++) p-3 → 0.75rem → 12px
++) p-4 → 1rem    → 16px
++) p-6 → 1.5rem  → 24px
++) p-8 → 2rem    → 32px
+
+* Nếu bắt buộc dùng pixel:
+==> <div className="w-[350px] mt-[37px]">
+* Nếu bắt buộc dùng HEX COLOR:
+==> <div className="bg-[#1DA1F2]">
+
+3. BUTTON
+- hover:
+- focus:
+- active:
+- disabled:
+
+* Chỉnh màu - HEX COLOR
