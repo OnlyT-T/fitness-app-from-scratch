@@ -27,8 +27,6 @@
 
 * Nếu bắt buộc dùng pixel:
 ==> <div className="w-[350px] mt-[37px]">
-* Nếu bắt buộc dùng HEX COLOR:
-==> <div className="bg-[#1DA1F2]">
 
 3. BUTTON
 - hover:
@@ -37,3 +35,4 @@
 - disabled:
 
 * Chỉnh màu - HEX COLOR
+==> <div className="bg-[#1DA1F2]">
