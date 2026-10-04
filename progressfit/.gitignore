@@ -1,9 +1,10 @@
+# dependencies
 node_modules
+
 .DS_Store
 dist
 dist-ssr
 *.local
-.env
 .nitro
 .tanstack
 .wrangler
@@ -11,3 +12,7 @@ dist-ssr
 .vinxi
 __unconfig*
 todos.json
+
+# environment
+.env
+.env.local
