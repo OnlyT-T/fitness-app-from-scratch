@@ -1,0 +1,38 @@
+DTO LÀ GÌ???
+-> DTO là object dùng để trao đổi dữ liệu giữa client và backend.
+
+Thay vì:
+JSON -> Entity -> Database
+Sẽ trả về:
+Dữ liệu JSON của Goal, nhưng mà bao gồm cả dữ liệu của object User.
+{
+  "id": 1,
+  "category": "RUNNING",
+  // Object User bị kèm theo
+  "user": {
+    "id": 1,
+    "displayName": "Trung",
+    "email": "trung@example.com"
+  }
+}
+
+Thì DTO xử lý:
+JSON -> DTO -> Service -> Entity -> Database
+
+Vậy khi trả kết quả:
+Database -> Entity -> DTO -> JSON
+
+==> Như vậy DTO sẽ giúp mình kiểm soát được những field nào
+    được nhận và trả về.
+
+HÌNH THỨC
+- Sử dụng dữ liệu dạng RECORD
+- RECORD là tính năng Java giúp tạo class chuyên chứa dữ liệu
+  mà không cần viết getters/constructor thủ công.
+- Ngoài ra, còn có:
+    + equals() để so sánh giá trị.
+    + hashCode() để tạo hash code.
+    + toString() để hiển thị thông tin object.
+
+- Các biến trong Record không thể bị thay đổi, TRỪ NỘI DUNG TRONG LIST.
+--> Vì thế Record có đặc điểm shallow immutability.
