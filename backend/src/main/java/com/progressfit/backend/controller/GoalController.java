@@ -8,6 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/api/users/{userId}/goals")
@@ -33,5 +36,30 @@ public class GoalController {
         @PathVariable Long userId
     ) {
         return goalService.getGoalsByUser(userId);
+    }
+
+    @GetMapping("/{goalId}")
+    public GoalResponse getGoalById(
+        @PathVariable Long userId,
+        @PathVariable Long goalId) {
+        return goalService.getGoalById(userId, goalId);
+    }
+    
+    @PutMapping("/{goalId}")
+    public GoalResponse updateGoal(
+        @PathVariable Long userId,
+        @PathVariable Long goalId,
+        @RequestBody GoalRequest request
+    ) {
+        return goalService.updateGoal(userId, goalId, request);
+    }
+
+    @DeleteMapping("/{goalId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteGoal(
+        @PathVariable Long userId,
+        @PathVariable Long goalId
+    ) {
+        goalService.deleteGoal(userId, goalId);
     }
 }

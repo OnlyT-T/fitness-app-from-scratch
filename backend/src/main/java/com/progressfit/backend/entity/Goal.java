@@ -1,8 +1,21 @@
 package com.progressfit.backend.entity;
 
-import jakarta.persistence.*;
-import java.time.LocalDate;
 import java.math.BigDecimal;
+import java.time.LocalDate;
+
+import com.progressfit.backend.enums.GoalMetric;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity 
 @Table(name = "goals")
@@ -21,8 +34,9 @@ public class Goal {
 
     private String exercise;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String metric;
+    private GoalMetric metric;
 
     @Column(nullable = false)
     private BigDecimal target;
@@ -70,11 +84,11 @@ public class Goal {
         this.exercise = exercise;
     }
 
-    public String getMetric() {
+    public GoalMetric getMetric() {
         return metric;
     }
 
-    public void setMetric(String metric) {
+    public void setMetric(GoalMetric metric) {
         this.metric = metric;
     }
 
