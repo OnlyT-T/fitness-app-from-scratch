@@ -1,4 +1,6 @@
-1. BẢNG THUẬT NGỮ CHUNG
+# Tailwind CSS
+
+## 1. BẢNG THUẬT NGỮ CHUNG
 | Muốn làm        | Tailwind        | CSS tương đương    |
 | -------------   | -------------   | ------------------ |
 | Background      | `bg-blue-500`   | `background-color` |
@@ -17,22 +19,22 @@
 | Flexbox         | `flex`          | `display: flex`    |
 | Grid            | `grid`          | `display: grid`    |
 
-2. ĐƠN VI ĐO
-+) p-1 → 0.25rem → 4px
-+) p-2 → 0.5rem  → 8px
-+) p-3 → 0.75rem → 12px
-+) p-4 → 1rem    → 16px
-+) p-6 → 1.5rem  → 24px
-+) p-8 → 2rem    → 32px
+## 2. ĐƠN VI ĐO
+* p-1 → 0.25rem → 4px
+* p-2 → 0.5rem  → 8px
+* p-3 → 0.75rem → 12px
+* p-4 → 1rem    → 16px
+* p-6 → 1.5rem  → 24px
+* p-8 → 2rem    → 32px
 
-* Nếu bắt buộc dùng pixel:
-==> <div className="w-[350px] mt-[37px]">
+Nếu bắt buộc dùng pixel:<br>
+> `<div className="w-[350px] mt-[37px]">`
 
-3. BUTTON
+## 3. BUTTON
 - hover:
 - focus:
 - active:
 - disabled:
 
-* Chỉnh màu - HEX COLOR
-==> <div className="bg-[#1DA1F2]">
+Chỉnh màu - HEX COLOR:<br>
+> `<div className="bg-[#1DA1F2]">`
