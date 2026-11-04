@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
-import { checkBackendHealth } from '../lib/api'
+import { checkBackendHealth } from '../lib/health'
 
 export const Route = createFileRoute('/')({ component: App })
 

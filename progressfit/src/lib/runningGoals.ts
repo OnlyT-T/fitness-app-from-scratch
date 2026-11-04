@@ -1,22 +1,9 @@
-const API_BASE_URL = 'http://localhost:8082/api'
+import type {
+    RunningGoal,
+    RunningGoalRequest,
+} from '../types/runningGoal'
 
-export type GoalMetric = 'DISTANCE' | 'DURATION' | 'PACE'
-
-export type RunningGoalRequest = {
-    category: 'RUNNING'
-    exercise: null
-    metric: GoalMetric
-    target: number
-    unit: 'km' | 'minutes' | 'min/km'
-    start_date: string
-    end_date: string
-}
-
-export type RunningGoal = RunningGoalRequest & {
-    id: number
-    userId: string
-    isActive: boolean
-}
+import { API_BASE_URL } from './client'
 
 async function handleResponse<T>(response: Response): Promise<T> {
     if (!response.ok) {
@@ -70,14 +57,3 @@ export async function deleteRunningGoal(
         )
     }
 }
-
-export async function checkBackendHealth() {
-    const response = await fetch(`${API_BASE_URL}/health`)
-
-    if (!response.ok) {
-        throw new Error('Backend is unavailable')
-    }
-    
-    return response.text()
-}
-

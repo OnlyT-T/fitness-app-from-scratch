@@ -5,7 +5,7 @@ import {
     createRunningGoal,
     type GoalMetric,
     type RunningGoalRequest,
-} from '../../lib/api'
+} from '../../lib/runningGoals'
 
 type Props = {
     userId: number
@@ -64,7 +64,7 @@ export function RunningGoalForm({ userId }: Props) {
                 Create Running Goal
             </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
                     <label className="block mb-2">
                         Metric
@@ -76,7 +76,7 @@ export function RunningGoalForm({ userId }: Props) {
                             setMetric(event.target.value as GoalMetric)
                         }
                         
-                        className="w-full rounded-lg border p-3">
+                        className="w-2/3 rounded-lg border p-3">
                             <option value="DISTANCE">Distance</option>
                             <option value="DURATION">Duration</option>
                             <option value="PACE">Pace</option>
@@ -94,7 +94,7 @@ export function RunningGoalForm({ userId }: Props) {
                            required
                            value={target}
                            onChange={(event) => setTartget(event.target.value)}
-                           className="w-full rounded-lg border p-3"
+                           className="w-2/3 rounded-lg border p-3"
                            placeholder="Enter your target"
                     />
                 </div>
@@ -112,7 +112,6 @@ export function RunningGoalForm({ userId }: Props) {
                                className="w-full rounded-lg border p-3"
                         />
                     </div>
-                </div>
 
                     <div>
                         <label className="block mb-2">End Date</label>
@@ -122,11 +121,12 @@ export function RunningGoalForm({ userId }: Props) {
                                min={start_date || undefined}
                                value={end_date}
                                onChange={(event) =>
-                                setStartDate(event.target.value)
+                                setEndDate(event.target.value)
                                }
                                className="w-full rounded-lg border p-3"
                         />
                     </div>
+                </div>
 
                     {createMutation.isError && (
                         <p className="text-red-400">

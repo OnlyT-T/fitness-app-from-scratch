@@ -7,7 +7,7 @@ import {
 import {
     deleteRunningGoal,
     getRunningGoals,
-} from '../../lib/api'
+} from '../../lib/runningGoals'
 
 type Props = {
     userId: number
