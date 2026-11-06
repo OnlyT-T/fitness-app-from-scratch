@@ -4,7 +4,7 @@
 - `useMutation` dùng cho các thao tác thay đổi dữ liệu **(POST, PUT, PATCH và DELETE)**
 
 ## 2. `invalidateQueries()`
-- Đánh dấu dữ liệu Running Activities hiện tại là **stale** và kích hoạt việc fetch lại đối với query đang được sử dụng.
+- Đánh dấu dữ liệu Running Activities hiện tại là **stale** và kích hoạt việc fetch lại đối với query đang được sử dụng.<br>
 -> Lịch sử running có thể tự động cập nhật sau khi lưu thành công.
 
 ## QueryClient
